@@ -1,7 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <style>
+    /* vite fait */
+    body{
+      background: rgb(253, 249, 229);
+      color:#000;
+      font-family:monospace;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    a{
+      color:#f60;
+      text-decoration: none;
+    }
+    p>a{
+      border-bottom:1px dashed currentColor;
+    }
+    .folder::before{
+      content:'📁';
+      margin-right: 12px;
+    }
+    .folder:hover::before{
+      content:'📂'
+    }
+    ul{
+      padding:0;
+    }
+    li{
+     display:block; 
+     border-top:1px solid rgba(0,0,0,0.2);
+     padding:6px;
+    }
+    li:hover{
+      background: #fff;
+    }
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <h1>Liste des courses</h1>
+  <ul>
+    <li><a class="folder" href="00-html/">00-html/</a> base d'HTML</li>
+    <li><a class="folder" href="00-html-avec-du-style/">00-html-avec-du-style/</a> même base d'HTML avec du style</li>
+    <li><a class="folder" href="00-html-avec-du-style-et-une-grille/">00-html-avec-du-style-et-une-grille/</a> même base avec une grille en plus</li>
+    <li><a class="folder" href="00-html-avec-du-style-une-grille-des-images/">00-html-avec-du-style-une-grille-des-images/</a> même base avec des images</li>
+  </ul>
+
+  <p>—<br><a href="https://github.com/git-esad/git-esad.github.io">Le GitHub avec les sources</a></p>
+  <p><a href="https://jenseign.com">Le site du cours : jenseign.com</a></p>
 </body>
 </html>
