@@ -51,9 +51,9 @@ function loadElements() {
   // Filter elements based on the current page URL
   var filteredElements = myObject.filter(element => {
     if (currentPageURL.includes("/Network")) {
-      return element.type === "réseau";
+      return element.type === "main" || element.type === "réseau";
     } else if (currentPageURL.includes("/Telecom")) {
-      return element.type === "réseau" || element.type === "télécommunication";
+      return element.type === "main" || element.type === "télécommunication";
     }
     return false;
   });
@@ -70,7 +70,7 @@ function createListItem(url, title) {
   var a = document.createElement('a');
   a.classList.add('folder');
   a.href = url;
-  a.textContent = title + " : ";
+  a.textContent = title;
   li.appendChild(a);
   return li;
 }
