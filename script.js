@@ -27,6 +27,9 @@ function loadElements() {
   // Clear existing list items
   ul.innerHTML = "";
 
+  // Find the "main" element
+  var mainElement = myObject.find(element => element.type === "main");
+
   // Check if the "main" element already exists in the list
   var mainElementExists = false;
   for (var i = 0; i < ul.children.length; i++) {
