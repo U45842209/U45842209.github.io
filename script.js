@@ -27,6 +27,22 @@ function loadElements() {
   // Clear existing list items
   ul.innerHTML = "";
 
+  // Check if the "main" element already exists in the list
+  var mainElementExists = false;
+  for (var i = 0; i < ul.children.length; i++) {
+    var li = ul.children[i];
+    if (li.textContent.trim() === mainElement.title) {
+      mainElementExists = true;
+      break;
+    }
+  }
+
+  // Create the "main" element if it doesn't exist
+  if (!mainElementExists) {
+    var mainLi = createListItem(mainElement.url, mainElement.title);
+    ul.insertBefore(mainLi, ul.firstChild);
+  }
+
   // Get the current page URL
   var currentPageURL = window.location.href;
 
