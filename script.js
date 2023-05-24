@@ -38,11 +38,18 @@ function loadElements() {
     ul.appendChild(mainLi);
   }
 
-  // Iterate over the elements in myObject and load the "réseau" elements
+  // Get the current page URL
+  var currentPageURL = window.location.href;
+
+  // Iterate over the elements in myObject and load the corresponding elements based on the current page URL
   for (var url in myObject) {
-    if (myObject[url].type === "réseau") {
-      var title = myObject[url].title;
-      var type = myObject[url].type;
+    var title = myObject[url].title;
+    var type = myObject[url].type;
+
+    if (currentPageURL.includes("/Network") && type === "réseau") {
+      var li = createListItem(url, title, type);
+      ul.appendChild(li);
+    } else if (currentPageURL.includes("/Telecom")) {
       var li = createListItem(url, title, type);
       ul.appendChild(li);
     }
@@ -54,7 +61,7 @@ function createListItem(url, title, type) {
   var a = document.createElement('a');
   a.classList.add('folder');
   a.href = url;
-  a.textContent = title + " : ";
+  a.textContent = title;
   li.appendChild(a);
 
   if (type === "réseau") {
