@@ -27,13 +27,6 @@ function loadElements() {
   // Clear existing list items
   ul.innerHTML = "";
 
-  // Create the "main" element if it doesn't exist
-  var mainElement = myObject.find(element => element.type === "main");
-  if (mainElement) {
-    var mainLi = createListItem(mainElement.url, mainElement.title);
-    ul.appendChild(mainLi);
-  }
-
   // Get the current page URL
   var currentPageURL = window.location.href;
 
