@@ -3,55 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <title>Accueil</title>
-    <!Font>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
-    </style>
-    <!CSS>
-    <style>
-        body {
-            font-family: 'PT Sans', sans-serif;
-        }
-        .title h1 {
-            margin: 0px;
-            padding-top: 0px;
-            font-weight: 700;
-            font-size: 30px;
-            color:black;
-        }
-        .title h2 {
-            opacity: 75%;
-            font-weight: 400;
-            font-size: 15px;
-            margin-left: 20px;
-            color:black;
-        }
-    </style>
-    <!Others>
+    body {
+      font-family: 'PT Sans', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .title h1 {
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      font-size: 30px;
+      color: #333;
+    }
+
+    .title h2 {
+      margin: 5px;
+      padding: 0;
+      opacity: 75%;
+      font-weight: 400;
+      font-size: 15px;
+      color: #666;
+    }
+
+    .projects {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .projects h1 {
+      margin: 0;
+      padding: 0;
+      font-weight: 700;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-top: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-input {
+      width: 250px;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-button:hover {
+      background-color: #45a049;
+    }
+  </style>
     <script src="script.js"></script>
 </head>
 <body>
-    <section class="title"> <!Titre>
+    <section class="title">
         <h1>Portfolio</h1>
         <h2>Par Marc T-D</h2>
     </section>
-    <hr style="width=100%;">
-    <section class="projects"> <!Mes projets>
-        <h1>Redirect Example</h1>
-        <div id="redirect-form">
-            <label for="code">Enter code:</label>
-            <input type="text" id="code">
-            <br>
-            <button onclick="redirectClicked()">Redirect</button>
+    <hr>
+    <section class="projects">
+        <h1>Code d'accès</h1>
+        <div id="redirect-form" class="form-group">
+            <label for="code" class="form-label">Entrez le code :</label>
+            <input type="text" id="code" class="form-input">
         </div>
-
-        <script>
-            function redirectClicked() {
-            var code = document.getElementById('code').value;
-            redirectPage(code);
-            }
-        </script>
+        <div class="form-group">
+            <button onclick="redirectClicked()" class="form-button">Redirection</button>
+        </div>
     </section>
 
+    <script>
+        function redirectClicked() {
+            var code = document.getElementById('code').value;
+            redirectPage(code);
+        }
+    </script>
 </body>
 </html>
