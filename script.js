@@ -38,12 +38,14 @@ function loadElements() {
     ul.appendChild(mainLi);
   }
 
-  // Iterate over the elements in myObject and load the elements with titles
+  // Iterate over the elements in myObject and load the "réseau" elements
   for (var url in myObject) {
-    var title = myObject[url].title;
-    var type = myObject[url].type;
-    var li = createListItem(url, title, type);
-    ul.appendChild(li);
+    if (myObject[url].type === "réseau") {
+      var title = myObject[url].title;
+      var type = myObject[url].type;
+      var li = createListItem(url, title, type);
+      ul.appendChild(li);
+    }
   }
 }
 
@@ -52,7 +54,7 @@ function createListItem(url, title, type) {
   var a = document.createElement('a');
   a.classList.add('folder');
   a.href = url;
-  a.textContent = title;
+  a.textContent = title + " : ";
   li.appendChild(a);
 
   if (type === "réseau") {
