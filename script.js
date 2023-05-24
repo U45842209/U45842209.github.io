@@ -22,18 +22,17 @@ function loadElements() {
     "https://github.com/U45842209/Reseaux-cellulaires": "télécommunication"
   };
 
-  if (window.location.pathname === '/Network') {
-    var links = document.querySelectorAll('.projects ul a');
-    var ul = document.querySelector('.projects ul');
+  var ul = document.querySelector('.projects ul');
 
-    for (var i = 0; i < links.length; i++) {
-      var link = links[i];
-      var href = link.getAttribute('href');
-      if (myObject[href] === 'réseau') {
-        var li = document.createElement('li');
-        li.innerHTML = link.outerHTML;
-        ul.appendChild(li);
-      }
+  for (var url in myObject) {
+    if (myObject[url] === "réseau") {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.classList.add('folder');
+      a.href = url;
+      a.textContent = myObject[url] + " : ";
+      li.appendChild(a);
+      ul.appendChild(li);
     }
   }
 }
