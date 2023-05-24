@@ -12,17 +12,6 @@ function redirectPage(code) {
 }
 
 function loadElements() {
-  var myObject = {
-    "https://github.com/U45842209/U45842209": { title: "A propos de moi", type: "main" },
-    "https://github.com/U45842209/SAE11": { title: "SAE11 : Hygiène informatique et cybersécurité", type: "réseau" },
-    "https://github.com/U45842209/SAE24": { title: "SAE24 : Mise en place d'un réseau d'entreprise", type: "réseau" },
-    "https://github.com/U45842209/Vis-ma-Vie_Fibre-optique": { title: "Intervention pose de fibre", type: "télécommunication" },
-    "https://github.com/U45842209/Formation_Comprendre-et-mettre-en-uvre-le-protocole-SIP-dans-le-cadre-de-la-VoIP-et-ToIP": { title: "Formation : Comprendre et mettre en œuvre le protocole SIP dans le cadre de la VoIP et ToIP", type: "télécommunication" },
-    "/Telecom/Ressources/SAE31.pdf": { title: "SAE31 : Analyse des filtres en SuperCollider", type: "télécommunication" },
-    "https://github.com/U45842209/Reseaux-cellulaires": { title: "Reseaux cellulaires", type: "télécommunication" }
-  };
-
-function loadElements() {
   var myObject = [
     { url: "https://github.com/U45842209/U45842209", title: "A propos de moi", type: "main" },
     { url: "https://github.com/U45842209/SAE11", title: "SAE11 : Hygiène informatique et cybersécurité", type: "réseau" },
