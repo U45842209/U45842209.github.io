@@ -18,8 +18,8 @@ function loadElements() {
     { url: "https://github.com/U45842209/SAE24", title: "SAE24 : Mise en place d'un réseau d'entreprise", type: "réseau" },
     { url: "https://github.com/U45842209/Vis-ma-Vie_Fibre-optique", title: "Intervention pose de fibre", type: "télécommunication" },
     { url: "https://github.com/U45842209/Formation_Comprendre-et-mettre-en-uvre-le-protocole-SIP-dans-le-cadre-de-la-VoIP-et-ToIP", title: "Formation : Comprendre et mettre en œuvre le protocole SIP dans le cadre de la VoIP et ToIP", type: "télécommunication" },
-    { url: "/Telecom/Ressources/SAE31.pdf", title: "SAE31 : Analyse des filtres en SuperCollider", type: "réseau" },
-    { url: "https://github.com/U45842209/Reseaux-cellulaires", title: "Reseaux cellulaires", type: "réseau" }
+    { url: "/Telecom/Ressources/SAE31.pdf", title: "SAE31 : Analyse des filtres en SuperCollider", type: "télécommunication" },
+    { url: "https://github.com/U45842209/Reseaux-cellulaires", title: "Reseaux cellulaires", type: "télécommunication" }
   ];
 
   var ul = document.querySelector('.projects ul');
