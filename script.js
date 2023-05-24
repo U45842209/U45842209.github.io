@@ -22,6 +22,13 @@ function loadElements() {
     "https://github.com/U45842209/Reseaux-cellulaires": { title: "Reseaux cellulaires", type: "télécommunication" }
   };
 
+  var ul = document.querySelector('.projects ul');
+
+  // Clear existing list items
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+
   // Create the "main" element
   var mainURL = "https://github.com/U45842209/U45842209";
   var mainTitle = "A propos de moi";
@@ -29,8 +36,7 @@ function loadElements() {
   var mainLi = createListItem(mainURL, mainTitle, mainType);
 
   // Append the "main" element to the beginning of the list
-  var ul = document.querySelector('.projects ul');
-  ul.insertBefore(mainLi, ul.firstChild);
+  ul.appendChild(mainLi);
 
   // Iterate over the remaining elements in myObject and load the elements with titles
   for (var url in myObject) {
