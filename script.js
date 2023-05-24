@@ -29,16 +29,16 @@ function loadElements() {
     ul.removeChild(ul.firstChild);
   }
 
-  // Create the "main" element
-  var mainURL = "https://github.com/U45842209/U45842209";
-  var mainTitle = "A propos de moi";
-  var mainType = "main";
-  var mainLi = createListItem(mainURL, mainTitle, mainType);
+  // Create the "main" element if it doesn't exist
+  if (!myObject.hasOwnProperty("https://github.com/U45842209/U45842209")) {
+    var mainURL = "https://github.com/U45842209/U45842209";
+    var mainTitle = "A propos de moi";
+    var mainType = "main";
+    var mainLi = createListItem(mainURL, mainTitle, mainType);
+    ul.appendChild(mainLi);
+  }
 
-  // Append the "main" element to the beginning of the list
-  ul.appendChild(mainLi);
-
-  // Iterate over the remaining elements in myObject and load the elements with titles
+  // Iterate over the elements in myObject and load the elements with titles
   for (var url in myObject) {
     var title = myObject[url].title;
     var type = myObject[url].type;
@@ -52,7 +52,7 @@ function createListItem(url, title, type) {
   var a = document.createElement('a');
   a.classList.add('folder');
   a.href = url;
-  a.textContent = title + " : ";
+  a.textContent = title;
   li.appendChild(a);
 
   if (type === "réseau") {
