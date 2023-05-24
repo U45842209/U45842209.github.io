@@ -53,9 +53,9 @@ function loadElements() {
   // Filter elements based on the current page URL
   var filteredElements = myObject.filter(element => {
     if (currentPageURL.includes("/Network")) {
-      return element.type === "main" || element.type === "réseau";
+      return element.type === "réseau";
     } else if (currentPageURL.includes("/Telecom")) {
-      return element.type === "main" || element.type === "télécommunication";
+      return element.type === "télécommunication";
     }
     return false;
   });
