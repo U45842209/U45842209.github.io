@@ -24,21 +24,16 @@ function loadElements() {
 
   if (window.location.pathname === '/Network') {
     var links = document.querySelectorAll('.projects ul a');
-    var filteredLinks = [];
+    var ul = document.querySelector('.projects ul');
 
     for (var i = 0; i < links.length; i++) {
       var link = links[i];
       var href = link.getAttribute('href');
       if (myObject[href] === 'réseau') {
-        filteredLinks.push(link);
+        var li = document.createElement('li');
+        li.innerHTML = link.outerHTML;
+        ul.appendChild(li);
       }
-    }
-
-    // Load the filtered links
-    for (var j = 0; j < filteredLinks.length; j++) {
-      var filteredLink = filteredLinks[j];
-      console.log("Loading element:", filteredLink.href);
-      // Code to load the element goes here
     }
   }
 }
