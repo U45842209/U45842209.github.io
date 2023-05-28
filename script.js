@@ -1,9 +1,9 @@
 function redirectPage(code) {
   switch (code) {
-    case 'page1':
+    case 'Myp9':
       window.open('/Network', '_blank');
       break;
-    case 'page2':
+    case '7saT':
       window.open('/Telecom', '_blank');
       break;
     default:
